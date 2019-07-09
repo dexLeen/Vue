@@ -1,7 +1,7 @@
 <template>
     <div style="padding:20px;" id="app">
         <div class="panel panel-primary">
-            <div class="panel-heading">用户管理</div>
+            <h1 class="panel-heading">用户管理</h1>
             <table class="table table-bordered table-striped text-center">
                 <thead>
                     <tr>
