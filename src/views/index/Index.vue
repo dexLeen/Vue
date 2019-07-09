@@ -93,6 +93,12 @@ export default {
     },
     methods: {
         Save: function(event) {
+            
+            if(!this.rowtemplate.Name || !this.rowtemplate.Age || !this.rowtemplate.School){
+                alert("Can't save a empty data!");
+                return false;
+            }
+
             if (this.rowtemplate.Id == 0) {
                 //设置当前新增行的Id
                 this.rowtemplate.Id = this.rows.length + 1;
