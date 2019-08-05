@@ -1,22 +1,23 @@
-import Vue from "vue";
-import Router from "vue-router";
-import HelloWorld from "@/components/HelloWorld";
-import Index from "../views/index/Index";
+import Vue from 'vue'
+import Router from 'vue-router'
+import HelloWorld from '@/components/HelloWorld'
+import Index from '../views/index/Index'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
-  mode: 'history',  // 取消网址后缀的#
+  // 取消网址后缀的#
+  mode: 'history',
   routes: [
     {
-      path: "/",
-      name: "HelloWorld",
+      path: '/',
+      name: 'HelloWorld',
       component: HelloWorld
     },
     {
-      path:"/index",
-      name: "Index",
+      path: '/index',
+      name: 'Index',
       component: Index
     }
   ]
-});
+})
