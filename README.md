@@ -11,6 +11,10 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
+# serve start by pm2
+PORT=8888 pm2 start bin/www --name "NodeDemo[8888]" --watch
+
+
 # build for production with minification
 npm run build
 

@@ -1,5 +1,5 @@
 <template>
-    <div style="padding:20px;" id="app">
+    <div style="padding:20px;">
         <div class="panel panel-primary">
             <h1 class="panel-heading">用户管理</h1>
             <table class="table table-bordered table-striped text-center">
@@ -20,8 +20,8 @@
                             <td>{{row.School}}</td>
                             <td>{{row.Remark}}</td>
                             <td>
-                                <a href="#" @click="Edit(row)">编辑</a>
-                                <a href="#" @click="Delete(row.Id)">删除</a>
+                                <a href="javascript:void(0);" @click="Edit(row)">编辑</a>
+                                <a href="javascript:void(0);" @click="Delete(row.Id)">删除</a>
                             </td>
                         </tr>
                     </template>
@@ -93,8 +93,11 @@ export default {
     },
     methods: {
         Save: function(event) {
-            
-            if(!this.rowtemplate.Name || !this.rowtemplate.Age || !this.rowtemplate.School){
+            if (
+                !this.rowtemplate.Name ||
+                !this.rowtemplate.Age ||
+                !this.rowtemplate.School
+            ) {
                 alert("Can't save a empty data!");
                 return false;
             }
